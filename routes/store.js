@@ -3,9 +3,7 @@ var express = require('express');
 var items = {
     SKN:{name:'Shuriken', price:100},
     ASK:{name:'Ashiko', price:690},
-    CGI:{name:'Chigiriki', price:250},
-    NGT:{name:'Naginata', price:900},
-    KTN:{name:'Katana', price:1000}
+   
 };
 exports.home = function(req, res) {
     // if user is not logged in, ask them to login
