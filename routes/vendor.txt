@@ -1,0 +1,10 @@
+a)vendor 
+api/vendor 'collectAllRegisterVendor','showAllVendor' 
+api/vendor/registor 'checkVendor','registerVendor','showAllVendor'
+api/vendor/add 'checkVendor','addVendor'
+api/vendor/delete 'checkVendor','deleteVendor'
+api/vendor/update 'checkVendor','updateVendor'
+
+vendor_Model
+api/vendorModel 'collectAllModelsOfVendor',"showDetails"
+

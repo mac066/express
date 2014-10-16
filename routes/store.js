@@ -12,7 +12,7 @@ exports.home = function(req, res) {
     if (typeof req.session.username == 'undefined') 
     	{res.render('home', { title: 'Ninja Store'});}
     // if user is logged in already, take them straight to the items list
-    else res.redirect('/items');
+    else {res.redirect('/items');}
 };
 // handler for form submitted from homepage
 exports.home_post_handler = function(req, res) {
@@ -55,3 +55,12 @@ exports.page = function(req, res) {
     };
     res.render('page', { title: 'Ninja Store - ' + name, username: req.session.username, content:contents[name] });
 };
+exports.logout=function(req, res) {
+    // delete the session variable
+    delete req.session.username;
+    // redirect user to homepage
+    res.redirect('/');
+    // console.log('sessoin value has'+req.session.username);
+};
+
+
