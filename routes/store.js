@@ -7,6 +7,16 @@ var items = {
 };
 exports.home = function(req, res) {
     // if user is not logged in, ask them to login
+    var fields = ['email', 'name', 'phone', 'address_line1',
+           ];
+var reqdata={};
+        fields.forEach(function (entry) {
+            if (typeof req.body[entry] !== 'phone') {
+                reqdata[entry] = (req.body[entry]);
+                console.log(" nis "+reqdata[entry]);
+            }
+        });
+
     if (typeof req.session.username == 'undefined') 
     	{res.render('home', { title: 'Ninja Store'});}
     // if user is logged in already, take them straight to the items list
